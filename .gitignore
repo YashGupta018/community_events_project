@@ -1,11 +1,13 @@
 # Ignore virtual environment
 venv/
+env/
 
 # Ignore database file
 db.sqlite3
 
 # Ignore static files
 /staticfiles/
+/static/
 
 # Ignore media files
 /media/
@@ -17,15 +19,48 @@ community_events/settings_local.py
 *.pyc
 __pycache__/
 
-# Ignore macOS system files
-.DS_Store
+# Ignore logs
+logs/
+*.log
+
+# Ignore migrations
+**/migrations/
 
 # Ignore IDE-specific files
 .vscode/
 .idea/
 
-# Ignore logs
-logs/
+# Ignore temporary files
+*.swp
+*~
 
-# Ignore environment variables file (if using)
-.env
+# Ignore Django secret key
+community_events/.secret_key
+
+# Ignore any other sensitive or environment-specific files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore pipenv/venv environment
+/.venv/
+pipenv-lock.json
+
+# Ignore Docker Compose files
+docker-compose.yml
+docker-compose.override.yml
+
+# Ignore local Docker images
+docker-compose.local.yml
+
+# Ignore .DS_Store files created by macOS
+.DS_Store
+
+# Ignore editor-specific files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system files
+Thumbs.db
+ehthumbs.db
